@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+/*Formateo de estilos por buena practica*/
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body, html {
+    background: url("/imagenes/fondo.png") no-repeat center center fixed;
+    -webkit-backdrop-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    color: #0c0604;
+
+} 
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+table>caption{
+    font-weight: bold;
+}
+table{   
+    text-align: center;
+    margin: auto;
+    border: 1px solid;
+}
+
+@media only screen and (max-width: 767px){
+    body{
+        background-image: url(/imagenes/fondo.png);
+    }
+}
+
+#slider{
+    overflow: hidden;
+}
+
+#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 15s slider infinite;
+}
+
+#slider figure img {
+    width:   20%;
+    float: left;
+}
+
+@keyframes slider{
+    0%{left: 0;}
+    20%{left: 0;}
+    25%{left: -100%;}
+    45%{left: -100%;}
+    50%{left: -200%;}
+    70%{left: -200%;}
+    75%{left: -300%;}
+    95%{left: -300%;}
+    100%{left: -400%;}
+}
+
+
+/*--SLIDE--*/
+#slide {
+    position: relative;
+    margin: auto;
+    width: 1000px;
+    height: 301px;
+}
+
+#slide ul{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    height: 301px;
+    background: url(/imagenes/libros/banner1.jpg);
+}
+
+#slide ul li img {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    transition: opacity 1s ease-out;
+}
